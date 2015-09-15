@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="goldMap">
+<head>
+	<meta charset="utf-8">
+        <title>Untitled</title>
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.js"></script>
+		<script src="main.js"></script>
+        
+        
+</head>
+<body ng-controller="mainController">
+	<div class="mapContainer">
+		<img ng-src="{{image}}" class="mapImage" ng-click="xMarksTheSpot($event)"/>
+			<div class= "marker" ng-repeat="marker in markers" ng-style= "{left : marker.x + 'px', top : marker.y + 'px'}">X</div>
+	
+	
+	</div>
+</body>
+</html>
